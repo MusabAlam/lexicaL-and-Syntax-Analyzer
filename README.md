@@ -2,6 +2,7 @@ Lexical and Syntax Analyzer Documentation
                                                                       **Lexical Analyzer**
 The lexical analyzer is responsible for tokenizing the input program. It recognizes individual tokens by matching them with their corresponding regular expressions. Here are the tokens and their regular expressions used in the code:
 
+
 while: Matches the keyword "while".
 self: Matches the keyword "self".
 for: Matches the keyword "for".
