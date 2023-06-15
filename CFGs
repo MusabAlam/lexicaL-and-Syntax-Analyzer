@@ -1,0 +1,226 @@
+			Single Statement 
+<sst> → <while > | <if> | <<if> <elif> <else> | <for> |<print> |<input>|<return> | <inilialization > | end
+
+
+			Body
+
+<body> → <sst><body> 
+
+
+			Operators
+
+<operators> → + | - | * | / | % 
+
+	
+			Function definition
+
+<fn def> → def <var> (<params>): <body>
+
+<params> → <var> <opt> | E | <integer> <opts>
+
+<opt> → ,<parameter>| E
+
+<parameter> → <var> <opt> | <integer> <opts>
+
+
+				
+			RETURN
+
+<return> → return <statement>
+
+<statement> → <add> |<sub> | <mul> | <div> | <value>  | <mod>
+
+<value> → <var> | <number>
+
+<add> → add <value , <value>
+
+<sub> → sub <value , <value>
+<mul> → mul <value , <value>
+<mid> → mod <value , <value>
+
+<div> → div <value , <value>
+
+		Function Call
+
+<fn call> → function_call ID (<params>)
+
+<params> →  ID <pm> | numerals <pm> | E
+
+<pm> → ,<pm> 
+
+			If elif else
+
+<if elif else> → <if> <condition> : <body> <opts>
+
+<opts> → E | <elif> | <else>
+
+<elif> → <elif> <condition> : <body>
+
+<else> → : <body>
+
+<body> → <statement | <statement> <body>
+ 
+<condition> → <expression> | <rel_op> <expression>
+
+<rel-op> → < , > , <= , >= , == , != 
+
+<expression) → <identifier> | <int_literal>
+
+<identifier) → [a-z- A-Z] [a-zA-2-0-9]* [0-9]+
+
+<int_literal> → [0-9]+[+-]
+
+
+			PRINT
+      
+<print> → print (" <string literal>" <opts> 
+
+<string literal> → A-Z a-z 0-9 Special char <shing literal> | E 
+
+<opts > → )| , <str2>
+<str2> → <var> <opts > | " <string literal > " <opt>
+
+
+			WHILE Loop
+
+<while Loop> -> while <condition>: <body> 
+
+<body> → <statement > | < statement><body> 
+
+<condition> → <expression> | <rel_op> <expression> 
+
+<expression> → <identifier> | <int_literal>
+
+<rel-op> → < , > , <= , >= , == , != 
+
+<identifier> → [a-zA-2-] [a-zA-2-0-9]* [0-9]+
+
+<int_literal> → [0-9]+
+
+
+				FOR Loop
+
+<for> → for <char> in range  <opts> 
+
+<opts> → : <body> | (<param opts>) : <body>
+
+<param opts> → <ID> <ID2>
+
+<ID2> → ,<ID> <ID2> | E
+
+<char> → A-Z a-z 
+
+<ID> → 0-9
+
+<ID2> → 0-9
+
+<body> → <statement> | <statement> <body>
+
+
+			INPUT 
+
+
+<statement> → <var> = input (<string>) 
+
+<var> → <char> <rest of var>
+
+<rest of var> → <char> <num const >| E
+
+<char> → a-z | A-Z | _
+
+<num_ const> → 0-9
+
+<string>"<str>"
+
+<str> → <char> <str> | <num-const> <str> | <special char> <str>
+
+<special char> → any special character | \n | \t
+
+		Data Types
+
+
+<DT> → <integer> | <float > | <list> | <string> | <bool>
+
+<integer> → 0-9
+
+<float> → 0.000000.... ..... 9.9999....
+
+<string> → "[a-z A-Z 0-9]"
+
+<bool > →  true | false
+
+<list> → [ <integer> <opts int>] | [ <string> <opts string>] | [ <float> <opts float>] | [ <bool> <opts bool>] 
+
+<opts int> → , <integer> <opts int> | E 
+
+<opts bool> → , <bool> <opts bool> | E 
+
+<opts string> → , <string> <opts string> | E 
+
+<opts float> → ,<float> <opts float> | E
+
+
+			Assignment 
+
+var> → <ID>  = <const>
+
+<ID> → <char> <rest of var>
+
+<rest of var> → <char> <rest of var> | <num const > <rest of var> | E
+
+<char> → a-z | A-Z | _a-z A-Z
+
+<const> → <integer> | <float> | <string> | <ID> 
+
+
+      Object Creation 
+
+<object call> → object_call ID = ID (<params>)
+
+<params> →  ID <pm> | numerals <pm> | flt_numerals <pm>| char<pm>| E
+
+<pm> → ,<pm> 
+
+
+
+     Class Definition
+       
+<class> → class ID <params>: <body>
+
+<identifier> → <letter> <rest of var> | _  <rest of var> 
+
+<rest of var> → <digit> <rest of var> | <letter> <rest of var> | _ <rest of var>
+
+<letter> → a-z A-Z
+
+<digits> → 0-9
+
+<params> → () | E | (self <ID> )
+
+<ID> → E | .<ID> 
+
+<ID> → <identifier>
+
+<body> → <asign> | <method >
+
+<assign> → <Dec> = <opts>
+
+<opts> → <identifier> | <expression>
+
+<method> → <M> 
+
+<M>  → def <M1> 
+ 
+<M1> → <normal M> | <constructor>
+
+<normal M> → <identifier> <params>: <body>
+
+<method_body> → <statement>
+
+<statement> → <assignment> | <if> | <while> | <if elif else> | <for> | <print> | <input> 
+
+<constructor> →  __init__ <params>: <body>
+
+
+
+
